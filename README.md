@@ -7,11 +7,13 @@
 很不错的一个题，因为我不太清楚这个系统里面是什么样子的，我们常用的函数和功能的源码在哪。不编一次源码就算各种操作都很娴熟那也只是在操作一个黑盒子。
 
 网上的教程很少，我是根据这一篇文章来的：
+
 <https://www.cnblogs.com/kenjones/archive/2011/03/09/1978611.html>
 
 编译前的环境准备：
 
 到Ubuntu官方网站下载老版本ubuntu 10.10镜像并在VMware上安装这个虚拟机
+
 <http://old-releases.ubuntu.com/releases/>
 主要流程为：
 
@@ -29,7 +31,11 @@
 ## 2 对源码文件进行修改添加新的系统调用
 
 路径与添加的内容在下图中
+![avatar](images/1.jpg)
 printk是向系统日志中打印字符，在此用它来打印一行歌词
+![avatar](images/2.jpg)
+![avatar](images/3.jpg)
+
 
 ## 3 编译源码得到新内核
 
@@ -64,6 +70,7 @@ make modules_install
 把该内核复制到/boot下并改名为vmlinuz-2.6.35.3-mykernel(vmlinuz没有拼错哦)
 
 我们还需要一个initrd文件，上面的博文中讲到要用下面的工具但是有一个问题Ubuntu10.10的apt源大部分已经不能用了，要先把sources.list里面的服务器源换掉
+![avatar](images/4.jpg)
 我使用的ubuntu官方提供的旧版镜像专用源
 然后再 apt-get install bootcd-mkinitramfs
 
