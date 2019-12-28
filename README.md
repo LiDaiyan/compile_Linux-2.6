@@ -15,6 +15,7 @@
 到Ubuntu官方网站下载老版本ubuntu 10.10镜像并在VMware上安装这个虚拟机
 
 <http://old-releases.ubuntu.com/releases/>
+
 主要流程为：
 
 下载并解压源码
